@@ -1,0 +1,428 @@
+﻿@{
+    ViewData["Title"] = "Take Exam";
+}
+
+@using OnlineExam.Model;
+
+@model Exam
+
+@{
+    ViewData["Title"] = "TakeExam";
+}
+
+<h3 class="form-control">Take Exam</h3>
+
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Topic:</label>
+        </div>
+        <div class="col-md-10 form-group">
+            <div class="alert alert-success">@Model.ExamName</div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Text:</label>
+        </div>
+        <div class="col-md-10 form-group">
+            <div class="alert alert-success">@Model.ExamText</div>
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row"> <label>Question 1:</label><input name="question1" type="text" class="form-control" disabled value="@ViewData["question"].ToString()" /></div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q1a" type="checkbox" id="q1a" class="form-control btn btn-info" value="@ViewData["choice"].ToString()" />
+                    @ViewData["choice"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q1b" type="checkbox" id="q1b" class="form-control btn btn-info" value="@ViewData["choice1"].ToString()" />
+                    @ViewData["choice1"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q1c" type="checkbox" id="q1c" class="form-control btn btn-info" value="@ViewData["choice2"].ToString()" />
+                    @ViewData["choice2"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q1d" type="checkbox" id="q1d" class="form-control btn btn-info" value="@ViewData["choice3"].ToString()" />
+                    @ViewData["choice3"].ToString()
+                </label>
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="col-md-5">
+            <div class="row"> <label>Question 2:</label><input name="question2" type="text" class="form-control" disabled value="@ViewData["question1"].ToString()" /></div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q2a" type="checkbox" id="q2a" class="form-control btn btn-info" value="@ViewData["choice4"].ToString()" />
+                    @ViewData["choice4"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q2b" type="checkbox" id="q2b" class="form-control btn btn-info" value="@ViewData["choice5"].ToString()" />
+                    @ViewData["choice5"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q2c" type="checkbox" id="q2c" class="form-control btn btn-info" value="@ViewData["choice6"].ToString()" />
+                    @ViewData["choice6"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q2d" type="checkbox" id="q2d" class="form-control btn btn-info" value="@ViewData["choice7"].ToString()" />
+                    @ViewData["choice7"].ToString()
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* q3 q4 *@
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row"> <label>Question 3:</label><input name="question3" type="text" class="form-control" disabled value="@ViewData["question2"].ToString()" /></div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q3a" type="checkbox" id="q3a" class="form-control btn btn-info" value="@ViewData["choice8"].ToString()" />
+                    @ViewData["choice8"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q3b" type="checkbox" id="q3b" class="form-control btn btn-info" value="@ViewData["choice9"].ToString()" />
+                    @ViewData["choice9"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q3c" type="checkbox" id="q3c" class="form-control btn btn-info" value="@ViewData["choice10"].ToString()" />
+                    @ViewData["choice10"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q3d" type="checkbox" id="q3d" class="form-control btn btn-info" value="@ViewData["choice11"].ToString()" />
+                    @ViewData["choice11"].ToString()
+                </label>
+            </div>
+        </div>
+        <div class="col"></div>
+        <div class="col-md-5">
+            <div class="row"> <label>Question 4:</label><input name="question4" type="text" class="form-control" disabled value="@ViewData["question3"].ToString()" /></div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q4a" type="checkbox" id="q4a" class="form-control btn btn-info" value="@ViewData["choice12"].ToString()" />
+                    @ViewData["choice12"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q4b" type="checkbox" id="q4b" class="form-control btn btn-info" value="@ViewData["choice13"].ToString()" />
+                    @ViewData["choice13"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q4c" type="checkbox" id="q4c" class="form-control btn btn-info" value="@ViewData["choice14"].ToString()" />
+                    @ViewData["choice14"].ToString()
+                </label>
+            </div>
+            <div class="row">
+                <label class="form-control">
+                    <input style="width:20px; height:20px;" name="q4d" type="checkbox" id="q4d" class="form-control btn btn-info" value="@ViewData["choice15"].ToString()" />
+                    @ViewData["choice15"].ToString()
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="form-group">
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 1:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question1" type="text" class="form-control" disabled value="@ViewData["question"].ToString()" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q1a" type="checkbox" id="q1a" class="form-control btn btn-info" value="@ViewData["choice"].ToString()" />
+                    @ViewData["choice"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q1b" type="checkbox" id="q1b" class="form-control btn btn-info" value="@ViewData["choice1"].ToString()" />
+                    @ViewData["choice1"].ToString()
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q1c" type="checkbox" id="q1c" class="form-control btn btn-info" value="@ViewData["choice2"].ToString()" />
+                    @ViewData["choice2"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q1d" type="checkbox" id="q1d" class="form-control btn btn-info" value="@ViewData["choice3"].ToString()" />
+                    @ViewData["choice3"].ToString()
+                </label>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 2:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question2" type="text" class="form-control" disabled value="@ViewData["question1"].ToString()" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q2a" type="checkbox" id="q2a" class="form-control btn btn-info" value="@ViewData["choice4"].ToString()" />
+                    @ViewData["choice4"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q2b" type="checkbox" id="q2b" class="form-control btn btn-info" value="@ViewData["choice5"].ToString()" />
+                    @ViewData["choice5"].ToString()
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q2c" type="checkbox" id="q2c" class="form-control btn btn-info" value="@ViewData["choice6"].ToString()" />
+                    @ViewData["choice6"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q2d" type="checkbox" id="q2d" class="form-control btn btn-info" value="@ViewData["choice7"].ToString()" />
+                    @ViewData["choice7"].ToString()
+                </label>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 3:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question3" type="text" class="form-control" disabled value="@ViewData["question2"].ToString()" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q3a" type="checkbox" id="q3a" class="form-control btn btn-info" value="@ViewData["choice8"].ToString()" />
+                    @ViewData["choice8"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q3b" type="checkbox" id="q3b" class="form-control btn btn-info" value="@ViewData["choice9"].ToString()" />
+                    @ViewData["choice9"].ToString()
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q3c" type="checkbox" id="q3c" class="form-control btn btn-info" value="@ViewData["choice10"].ToString()" />
+                    @ViewData["choice10"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q3d" type="checkbox" id="q3d" class="form-control btn btn-info" value="@ViewData["choice11"].ToString()" />
+                    @ViewData["choice11"].ToString()
+                </label>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 4:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question4" type="text" class="form-control" disabled value="@ViewData["question3"].ToString()" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q4a" type="checkbox" id="q4a" class="form-control btn btn-info" value="@ViewData["choice12"].ToString()" />
+                    @ViewData["choice12"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q4b" type="checkbox" id="q4b" class="form-control btn btn-info" value="@ViewData["choice13"].ToString()" />
+                    @ViewData["choice13"].ToString()
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q4c" type="checkbox" id="q4c" class="form-control btn btn-info" value="@ViewData["choice14"].ToString()" />
+                    @ViewData["choice14"].ToString()
+                </label>
+            </div>
+            <div class="col-md-6 form-control">
+                <label>
+                    <input style="width:20px; height:20px;" name="q4d" type="checkbox" id="q4d" class="form-control btn btn-info" value="@ViewData["choice15"].ToString()" />
+                    @ViewData["choice15"].ToString()
+                </label>
+            </div>
+        </div>
+
+    </div>*@
+
+<div class="form-group">
+    <div class="row">
+        <div class="col-md-12">
+            <input id="btnAnswer" type="submit" value="Submit Answers" class="btn btn-success form-control" />
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('input[name*="q4"]').on('change', function () {
+            $('input[name*="q4"]').not(this).prop('checked', false);
+        });
+        $('input[name*="q3"]').on('change', function () {
+            $('input[name*="q3"]').not(this).prop('checked', false);
+        });
+        $('input[name*="q2"]').on('change', function () {
+            $('input[name*="q2"]').not(this).prop('checked', false);
+        });
+        $('input[name*="q1"]').on('change', function () {
+            $('input[name*="q1"]').not(this).prop('checked', false);
+        });
+
+    });
+
+    $("#btnAnswer").click(function () {
+        var answer1 = $("input[name*='q1']:checked").attr("value");
+
+        var answer2 = $("input[name*='q2']:checked").attr("value");
+
+        var answer3 = $("input[name*='q3']:checked").attr("value");
+
+        var answer4 = $("input[name*='q4']:checked").attr("value");
+
+
+        $.when(check1(answer1)).then(check2(answer2)).then(check3(answer3)).then(check4(answer4))
+
+
+    });
+
+    var check1 = function(answer1) {
+     $.ajax({
+                type: 'POST',
+                url: '/Home/CheckAnswer',
+                dataType: 'json',
+                data: { 'answer1': answer1, 'examid': @Model.ExamID },
+                success: function (response) {
+                    if (response == "OK") {
+                        $("input[name*='q1']:checked").parent().closest("label").css({ "background-color": "green" });
+                    } else { $("input[name*='q1']:checked").parent().closest("label").css({ "background-color": "red" });}
+                },
+         error: function (err) {
+             alert(err);
+         }, async: false
+
+            });
+    };
+
+     var check2 = function(answer2) {
+     $.ajax({
+                type: 'POST',
+                url: '/Home/CheckAnswer2',
+                dataType: 'json',
+                data: { 'answer2': answer2, 'examid': @Model.ExamID },
+                success: function (response) {
+                    if (response == "OK") {
+                        $("input[name*='q2']:checked").parent().closest("label").css({ "background-color": "green" });
+                    } else { $("input[name*='q2']:checked").parent().closest("label").css({ "background-color": "red" });}
+                },
+                error: function (err) {
+                    alert(err);
+         }, async: false
+
+            });
+    };
+
+     var check3 = function(answer3) {
+     $.ajax({
+                type: 'POST',
+                url: '/Home/CheckAnswer3',
+                dataType: 'json',
+                data: { 'answer3': answer3, 'examid': @Model.ExamID },
+                success: function (response) {
+                    if (response == "OK") {
+                        $("input[name*='q3']:checked").parent().closest("label").css({ "background-color": "green" });
+                    } else {$("input[name*='q3']:checked").parent().closest("label").css({ "background-color": "red" });}
+                },
+         error: function (err) {
+             alert(err);
+         }, async: false
+
+            });
+    };
+
+     var check4 = function(answer4) {
+     $.ajax({
+                type: 'POST',
+                url: '/Home/CheckAnswer4',
+                dataType: 'json',
+                data: { 'answer4': answer4, 'examid': @Model.ExamID },
+                success: function (response) {
+                    if (response == "OK") {
+                        $("input[name*='q4']:checked").parent().closest("label").css({ "background-color": "green" });
+                    } else { $("input[name*='q4']:checked").parent().closest("label").css({ "background-color": "red" });}
+                },
+         error: function (err) {
+             alert(err);
+                },async:false
+
+            });
+    };
+
+
+
+</script>

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineExam.Model\OnlineExam.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="OnlineExam.Core">
+      <HintPath>..\OnlineExam.Core\bin\Debug\netcoreapp3.0\OnlineExam.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineExam.DAL">
+      <HintPath>..\OnlineExam.DAL\bin\Debug\netcoreapp3.0\OnlineExam.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="OnlineExam.Model">
+      <HintPath>..\OnlineExam.Model\bin\Debug\netcoreapp3.0\OnlineExam.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

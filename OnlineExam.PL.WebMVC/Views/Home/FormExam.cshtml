@@ -1,0 +1,275 @@
+﻿@{
+    ViewData["Title"] = "Form Exam";
+}
+<h3 class="form-control">Create Exam</h3>
+
+<br />
+
+@using (Html.BeginForm("FormExam", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2">
+                <label>Topic: </label>
+            </div>
+            <div class="col-md-10 form-group">
+                @Html.DropDownList("h2", (IEnumerable<SelectListItem>)ViewData["myh2"], new { @class = "form-control", @onchange = "FillText()", @id = "ddl" })
+                <input id="hidden" type="hidden" name="hidden" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2">
+                <label>Text: </label>
+            </div>
+            <div class="col-md-10 form-group">
+                <textarea rows="3" cols="12" disabled id="qtext" class=" form-control">
+
+               </textarea>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 1:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question1" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option A:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q1a" type="text" class="form-control"  required/>
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option B:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q1b" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option C:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q1c" type="text" class="form-control" required/>
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option D:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q1d" type="text" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 align-items-center">
+                <select name="correct" class="form-control" required>
+                    <option selected disabled hidden>Choose the correct answer..</option>
+                    <option value="1">Choice A</option>
+                    <option value="2">Choice B</option>
+                    <option value="3">Choice C</option>
+                    <option value="4">Choice D</option>
+                </select>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 2:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question2" type="text" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option A:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q2a" type="text" class="form-control" required/>
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option B:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q2b" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option C:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q2c" type="text" class="form-control" required/>
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option D:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q2d" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 align-items-center">
+                <select name="correct1" class="form-control" required>
+                    <option selected disabled hidden>Choose the correct answer..</option>
+                    <option value="1">Choice A</option>
+                    <option value="2">Choice B</option>
+                    <option value="3">Choice C</option>
+                    <option value="4">Choice D</option>
+                </select>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 3:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question3" type="text" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option A:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q3a" type="text" class="form-control" required />
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option B:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q3b" type="text" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option C:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q3c" type="text" class="form-control" required/>
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option D:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q3d" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 align-items-center">
+                <select name="correct2" class="form-control" required>
+                    <option selected disabled hidden>Choose the correct answer..</option>
+                    <option value="1">Choice A</option>
+                    <option value="2">Choice B</option>
+                    <option value="3">Choice C</option>
+                    <option value="4">Choice D</option>
+                </select>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Question 4:</label>
+            </div>
+            <div class="col-md-10">
+                <input name="question4" type="text" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option A:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q4a" type="text" class="form-control" required />
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option B:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q4b" type="text" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 form-control">
+                <label>Option C:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q4c" type="text" class="form-control" required />
+            </div>
+            <div class="col-md-2 form-control">
+                <label>Option D:</label>
+            </div>
+            <div class="col-md-4">
+                <input name="q4d" type="text" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-6 align-items-center">
+                <select name="correct3" class="form-control" required>
+                    <option selected disabled hidden>Choose the correct answer..</option>
+                    <option value="1">Choice A</option>
+                    <option value="2">Choice B</option>
+                    <option value="3">Choice C</option>
+                    <option value="4">Choice D</option>
+                </select>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <input type="submit" value="Create Exam" class="btn btn-success form-control" />
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+}
+
+<script>
+
+    function FillText() {
+
+        if ($("#ddl").prop('selectedIndex') == "0") {
+            $('#qtext').html("@ViewData["p0"].ToString()");
+            $('#hidden').val($('#ddl :selected').text());
+        }
+        else if ($("#ddl").prop('selectedIndex') == "1") {
+            $('#qtext').html("@ViewData["p1"].ToString()");
+            $('#hidden').val($('#ddl :selected').text());
+        }
+        else if ($("#ddl").prop('selectedIndex') == "2") {
+            $('#qtext').html("@ViewData["p2"].ToString()");
+            $('#hidden').val($('#ddl :selected').text());
+        }
+        else if ($("#ddl").prop('selectedIndex') == "3") {
+            $('#qtext').html("@ViewData["p3"].ToString()");
+            $('#hidden').val($('#ddl :selected').text());
+        }
+        else if ($("#ddl").prop('selectedIndex') == "4") {
+            $('#qtext').html("@ViewData["p4"].ToString()");
+            $('#hidden').val($('#ddl :selected').text());
+        }
+    }
+
+</script>
